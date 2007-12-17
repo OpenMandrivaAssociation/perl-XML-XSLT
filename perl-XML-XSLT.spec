@@ -15,7 +15,6 @@ BuildRequires:	perl-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:  perl-XML-DOM
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module implements the W3C's XSLT specification. The goal is
