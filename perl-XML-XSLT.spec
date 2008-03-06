@@ -1,7 +1,7 @@
 %define module	XML-XSLT
 %define	name	perl-%{module}
 %define version 0.48
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary:	XML::XSLT - A perl module for processing XSLT
 Name:		%{name}
