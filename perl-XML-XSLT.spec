@@ -1,21 +1,20 @@
-%define module	XML-XSLT
-%define	name	perl-%{module}
-%define version 0.48
-%define release %mkrel 6
+%define upstream_name	 XML-XSLT
+%define upstream_version 0.48
+
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	%mkrel 1
 
 Summary:	XML::XSLT - A perl module for processing XSLT
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
 URL:		http://www.cpan.org/
-Source0:	http://search.cpan.org/CPAN/authors/id/J/JS/JSTOWE/%{module}-%{version}.tar.bz2
-BuildRequires:	perl-devel
+Source0:	http://search.cpan.org/CPAN/authors/id/J/JS/JSTOWE/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	perl-XML-Parser
 BuildRequires:  perl-XML-DOM
-BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements the W3C's XSLT specification. The goal is
@@ -29,7 +28,7 @@ have to be installed properly for XML::XSLT to run.
 
 %prep
 
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 # (tv) fix doc permissions:
 chmod 755 examples
 
@@ -52,5 +51,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_mandir}/*/*
 %{perl_vendorlib}/XML
-
-
