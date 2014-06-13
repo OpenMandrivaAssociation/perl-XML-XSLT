@@ -4,7 +4,7 @@
 Summary:	XML::XSLT - A perl module for processing XSLT
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	10
+Release:	11
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://www.cpan.org/
