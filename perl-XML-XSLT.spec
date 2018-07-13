@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		http://www.cpan.org/
 Source0:	http://search.cpan.org/CPAN/authors/id/J/JS/JSTOWE/%{modname}-%{modver}.tar.bz2
 BuildArch:	noarch
+BuildRequires:	perl(Test::More)
 BuildRequires:	perl-devel
 BuildRequires:	perl-XML-Parser
 BuildRequires:	perl-XML-DOM
